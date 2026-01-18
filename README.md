@@ -24,7 +24,7 @@ This project analyzes driving patterns using telematics data to identify:
 
 ## Installation
 ```bash
-git clone https://github.com/yourusername/driver-behavior-analysis.git
+git clone https://github.com/sindhiya225/driver-behavior-analysis.git
 cd driver-behavior-analysis
 pip install -r requirements.txt
 
@@ -35,4 +35,5 @@ python main.py --config config/config.yaml
 python -m src.clustering --data data/data_cleaned.csv --k 5
 
 # Create Power BI dataset
+
 python -m src.data_processor --output powerbi/dataset.csv
