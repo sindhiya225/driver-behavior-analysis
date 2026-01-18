@@ -1,0 +1,34 @@
+
+### **3. config/config.yaml**
+```yaml
+data:
+  input_file: "data/data_cleaned.csv"
+  output_dir: "results/"
+  
+clustering:
+  n_clusters: 5
+  random_state: 42
+  features:
+    - 'harsh_acceleration_score'
+    - 'harsh_braking_score'
+    - 'speeding_score'
+    - 'fuel_efficiency_score'
+    - 'rpm_variability'
+  
+thresholds:
+  harsh_acceleration: 3.5  # m/s²
+  harsh_braking: -3.5     # m/s²
+  speeding: 88            # mph
+  dangerous_rpm: 3000     # RPM
+  
+analysis:
+  risk_score_weights:
+    acceleration: 0.25
+    braking: 0.30
+    speeding: 0.25
+    fuel: 0.20
+  
+visualization:
+  color_palette: "viridis"
+  save_format: "png"
+  dpi: 300
