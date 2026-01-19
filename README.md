@@ -19,6 +19,47 @@ A comprehensive data science solution for analyzing driver behavior patterns usi
 
 ##  Project Structure
 
+```
+driver-behavior-analysis/
+│
+├── data/
+│   ├── data_cleaned.csv
+│   └── data_dictionary.md
+│
+├── notebooks/
+│   ├── 1_data_exploration.ipynb
+│   ├── 2_feature_engineering.ipynb
+│   ├── 3_clustering_analysis.ipynb
+│   └── 4_statistical_analysis.ipynb
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_processor.py
+│   ├── clustering.py
+│   ├── feature_extractor.py
+│   └── utils.py
+│
+├── config/
+│   └── config.yaml
+│
+├── results/
+│   ├── clusters/
+│   ├── visualizations/
+│   └── reports/
+│
+├── powerbi/
+│   ├── driver_behavior_analysis.pbix
+│   └── dashboard_screenshots/
+│
+├── docs/
+│   ├── methodology.md
+│   ├── findings_report.md
+│   └── business_implications.md
+│
+├── requirements.txt
+├── README.md
+└── main.py
+```
 
 
 ## 🔍 Key Features
@@ -102,3 +143,4 @@ python -m src.utils --output powerbi/dataset.csv
 ##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
