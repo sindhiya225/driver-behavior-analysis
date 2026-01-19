@@ -1,39 +1,104 @@
-# Driver Behavior & Risk Analysis System
+#  Driver Behavior & Risk Analysis System
 
-## Project Overview
-This project analyzes driving patterns using telematics data to identify:
-- Risky driving behaviors
-- Fuel-inefficient habits
-- Safety compliance patterns
-- Driver segmentation for targeted training
+##  Project Overview
+A comprehensive data science solution for analyzing driver behavior patterns using telematics data to improve fleet safety, optimize fuel efficiency, and reduce operational costs. This system transforms raw sensor data into actionable insights through machine learning clustering and statistical analysis.
 
-## Key Features
-- **K-Means Clustering** for driver segmentation
-- **Time-series analysis** of acceleration/deceleration patterns
-- **Risk scoring algorithm** for each driver
-- **Fuel efficiency metrics** calculation
-- **Interactive Power BI dashboard**
-- **Statistical hypothesis testing**
+##  Key Objectives
+- **Risk Identification**: Detect dangerous driving behaviors and categorize driver risk levels
+- **Fuel Efficiency**: Identify fuel-wasting habits and optimization opportunities  
+- **Safety Compliance**: Monitor and improve adherence to safety protocols
+- **Cost Reduction**: Minimize fuel consumption, maintenance costs, and insurance premiums
+- **Predictive Insights**: Forecast potential incidents and maintenance needs
 
-## Tech Stack
-- Python (Pandas, NumPy, Scikit-learn)
-- Machine Learning (K-Means, PCA)
-- Power BI for visualization
-- Statistical Analysis (ANOVA, T-tests)
-- Jupyter Notebooks for exploration
+##  Tech Stack
+- **Data Processing**: Python, Pandas, NumPy
+- **Machine Learning**: Scikit-learn (K-means, PCA, clustering validation)
+- **Statistical Analysis**: SciPy, Statsmodels, hypothesis testing
+- **Visualization**: Matplotlib, Seaborn, Power BI
+- **Project Structure**: Modular Python, Jupyter Notebooks, YAML configuration
 
-## Installation
+##  Project Structure
+
+
+
+## 🔍 Key Features
+
+### 1. Data Processing Pipeline
+- Automated cleaning and transformation of telematics data
+- Feature engineering for time-based, acceleration, speed, and RPM metrics
+- Missing value imputation and outlier detection
+
+### 2. Machine Learning Analysis
+- K-means clustering with optimal cluster determination (Elbow Method, Silhouette Score)
+- Principal Component Analysis (PCA) for dimensionality reduction
+- Driver segmentation into 5 distinct behavior profiles
+- Cluster validation using multiple metrics
+
+### 3. Statistical Validation
+- Hypothesis testing (ANOVA, t-tests, correlation analysis)
+- Regression modeling for risk prediction
+- Time-series pattern analysis
+- Statistical power calculations for intervention studies
+
+### 4. Business Intelligence
+- Interactive Power BI dashboards
+- Executive summary reports
+- Driver scorecards and performance tracking
+- Cost-benefit analysis and ROI projections
+
+
+##  Getting Started
+
+### Prerequisites
+- Python 3.8+
+- Power BI Desktop (for dashboard visualization)
+
+### Installation
 ```bash
-git clone https://github.com/sindhiya225/driver-behavior-analysis.git
+git clone https://github.com/yourusername/driver-behavior-analysis.git
 cd driver-behavior-analysis
+
 pip install -r requirements.txt
 
-# Run complete analysis pipeline
+python -m src.data_processor
+```
+
+### Usage
+```bash
 python main.py --config config/config.yaml
 
-# Generate clusters
-python -m src.clustering --data data/data_cleaned.csv --k 5
+jupyter notebook notebooks/1_data_exploration.ipynb
 
-# Create Power BI dataset
+python -m src.utils --output powerbi/dataset.csv
+```
 
-python -m src.data_processor --output powerbi/dataset.csv
+## Dashboards & Reports
+
+### Power BI Dashboards
+
+- Executive Overview – KPIs, risk distribution, cluster analysis
+- Driver Behavior Analysis – Individual driver metrics
+- Cluster Deep Dive – Cluster characteristics & recommendations
+- Trends & Predictions – Time-series insights
+
+
+## Methodology
+
+### Data Sources
+
+- Vehicle telematics data (GPS, accelerometer, OBD-II)
+- Time-series measurements
+- Derived behavioral metrics
+
+### Analysis Approach
+
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Clustering & Segmentation
+- Statistical Validation
+- Business Translation
+
+
+##  License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
